@@ -7,7 +7,7 @@
     - sys.path.appendでパスを通す
 
 # Pythonとの違い
-- 4章：等価性の比較は__eq__を上書きする
+- 4章：等価性の比較は__eq__を上書きすると良さげ（assertTrueとかじゃなくてassertEqualでテスト）
 
 # urls
 - https://hackmd.io/yN010kF6TcWOGS0A9KQ-pQ

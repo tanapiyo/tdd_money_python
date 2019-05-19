@@ -1,9 +1,9 @@
-import money
+from src.money import Money
 
-class Franc(money.Money):
+class Franc(Money):
     def __init__(self, amount):
         super().__init__(amount)
-         
+
     def times(self, multiplier):
-        return Franc(self.__amount * multiplier)
+        return Franc(self.amount * multiplier)
     
