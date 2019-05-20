@@ -1,6 +1,3 @@
-from src.dollar import Dollar
-from src.franc import Franc
-
 class Money(object):
     def __init__(self, amount):
         self.amount = amount
@@ -9,5 +6,24 @@ class Money(object):
         return self.__dict__ == other.__dict__
 
     #factory method
-    def dollar(amount: int) -> Dollar:
+    @staticmethod
+    def dollar(amount: int):
         return Dollar(amount)
+    
+    @staticmethod
+    def franc(amount: int):
+        return Franc(amount)
+
+class Dollar(Money):
+    def __init__(self, amount):
+        super().__init__(amount)
+
+    def times(self, multiplier):
+        return Dollar(self.amount * multiplier)
+
+class Franc(Money):
+    def __init__(self, amount):
+        super().__init__(amount)
+
+    def times(self, multiplier):
+        return Franc(self.amount * multiplier)

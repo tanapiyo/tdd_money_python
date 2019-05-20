@@ -1,4 +1,4 @@
-from src.money import Money
+from money import Money
 
 class Dollar(Money):
     def __init__(self, amount):
