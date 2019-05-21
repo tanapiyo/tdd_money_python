@@ -1,5 +1,7 @@
 
-class Money(object):
+from expression import Expression
+
+class Money(Bank):
     def __init__(self, amount, currency):
         self.amount = amount
         self.currency = currency
@@ -21,3 +23,6 @@ class Money(object):
     
     def currency(self):
         return self.currency
+    
+    def plus(addend):
+        return Money(self.amount + addend.amount, self.currency)
